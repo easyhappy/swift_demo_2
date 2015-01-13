@@ -30,7 +30,7 @@ class PageViewController: UIViewController, UIScrollViewDelegate {
         
         // 2
         pageControl.currentPage = 0
-        pageControl.numberOfPages = pageCount
+        pageControl.numberOfPages = 5
         
         // 3
         for _ in 0..<pageCount {
@@ -99,6 +99,7 @@ class PageViewController: UIViewController, UIScrollViewDelegate {
         var firstPage = page - 1
         var lastPage = page + 1
        
+        println("firtPage: \(firstPage) lastPage\(lastPage)")
         // 清理firstPage之前的所有页面
         for var index = 0; index < firstPage; ++index {
             purgePage(index)
