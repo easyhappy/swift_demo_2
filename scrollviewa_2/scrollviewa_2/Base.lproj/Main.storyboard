@@ -85,41 +85,33 @@
                     <view key="view" contentMode="scaleToFill" id="ooT-4v-qnc">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I0G-2e-J7A">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I0G-2e-J7A">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <subviews>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="sct-iS-i1j">
-                                        <rect key="frame" x="-19" y="-18" width="39" height="37"/>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="177" y="300" width="39" height="37"/>
-                                        </variation>
-                                    </pageControl>
-                                </subviews>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="sct-iS-i1j"/>
-                                    </mask>
-                                </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="7" y="216" width="403" height="337"/>
-                                    <mask key="subviews">
-                                        <include reference="sct-iS-i1j"/>
-                                    </mask>
+                                    <rect key="frame" x="-7" y="293" width="400" height="278"/>
                                 </variation>
                                 <connections>
                                     <outlet property="delegate" destination="0dX-GG-wNW" id="Tl5-mk-YNh"/>
                                 </connections>
                             </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="sct-iS-i1j">
+                                <rect key="frame" x="-19" y="-18" width="39" height="37"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-7" y="563" width="400" height="37"/>
+                                </variation>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="I0G-2e-J7A"/>
+                                <exclude reference="sct-iS-i1j"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="I0G-2e-J7A"/>
+                                <include reference="sct-iS-i1j"/>
                             </mask>
                         </variation>
                     </view>
