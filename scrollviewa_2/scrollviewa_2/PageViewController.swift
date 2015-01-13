@@ -74,7 +74,7 @@ class PageViewController: UIViewController, UIScrollViewDelegate {
     
     
     func purgePage(page: Int) {
-        return
+        
         if page < 0 || page >= pageImages.count {
             // 如果超出要显示的范围，什么也不做
             return
