@@ -20,11 +20,11 @@ class PageViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         
         // 1
-        pageImages.insert(UIImage(named: "photo1.png")!, atIndex: 0)
-        pageImages.insert(UIImage(named: "photo2.png")!, atIndex: 1)
-        pageImages.insert(UIImage(named: "photo3.png")!, atIndex: 2)
-        pageImages.insert(UIImage(named: "photo4.png")!, atIndex: 3)
-        pageImages.insert(UIImage(named: "photo5.png")!, atIndex: 4)
+        pageImages.append(UIImage(named: "photo1.png")!)
+        pageImages.append(UIImage(named: "photo2.png")!)
+        pageImages.append(UIImage(named: "photo3.png")!)
+        pageImages.append(UIImage(named: "photo4.png")!)
+        pageImages.append(UIImage(named: "photo5.png")!)
 
         let pageCount = pageImages.count
         
@@ -74,6 +74,7 @@ class PageViewController: UIViewController, UIScrollViewDelegate {
     
     
     func purgePage(page: Int) {
+        return
         if page < 0 || page >= pageImages.count {
             // 如果超出要显示的范围，什么也不做
             return
@@ -95,9 +96,9 @@ class PageViewController: UIViewController, UIScrollViewDelegate {
         pageControl.currentPage = page
         
         // 计算那些页面需要加载
-        let firstPage = page - 1
-        let lastPage = page + 1
-        
+        var firstPage = page - 1
+        var lastPage = page + 1
+       
         // 清理firstPage之前的所有页面
         for var index = 0; index < firstPage; ++index {
             purgePage(index)
