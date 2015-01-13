@@ -22,6 +22,8 @@
 		F92EAD3C1A64B24000A74998 /* photo5.png in Resources */ = {isa = PBXBuildFile; fileRef = F92EAD361A64B24000A74998 /* photo5.png */; };
 		F92EAD3D1A64B24000A74998 /* slow.png in Resources */ = {isa = PBXBuildFile; fileRef = F92EAD371A64B24000A74998 /* slow.png */; };
 		F92EAD3F1A64B40300A74998 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92EAD3E1A64B40300A74998 /* PageViewController.swift */; };
+		F95099B51A6529880033F527 /* PeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95099B41A6529880033F527 /* PeekViewController.swift */; };
+		F95099B71A652C4D0033F527 /* ScrollViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95099B61A652C4D0033F527 /* ScrollViewContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		F92EAD361A64B24000A74998 /* photo5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo5.png; sourceTree = "<group>"; };
 		F92EAD371A64B24000A74998 /* slow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slow.png; sourceTree = "<group>"; };
 		F92EAD3E1A64B40300A74998 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		F95099B41A6529880033F527 /* PeekViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeekViewController.swift; sourceTree = "<group>"; };
+		F95099B61A652C4D0033F527 /* ScrollViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				F92EAD0B1A64B15200A74998 /* Supporting Files */,
 				F92EAD301A64B1B800A74998 /* View2Controller.swift */,
 				F92EAD3E1A64B40300A74998 /* PageViewController.swift */,
+				F95099B41A6529880033F527 /* PeekViewController.swift */,
+				F95099B61A652C4D0033F527 /* ScrollViewContainer.swift */,
 			);
 			path = scrollviewa_2;
 			sourceTree = "<group>";
@@ -247,9 +253,11 @@
 			files = (
 				F92EAD131A64B15200A74998 /* ViewController.swift in Sources */,
 				F92EAD3F1A64B40300A74998 /* PageViewController.swift in Sources */,
+				F95099B71A652C4D0033F527 /* ScrollViewContainer.swift in Sources */,
 				F92EAD311A64B1B800A74998 /* View2Controller.swift in Sources */,
 				F92EAD111A64B15200A74998 /* scrollviewa_2.xcdatamodeld in Sources */,
 				F92EAD0E1A64B15200A74998 /* AppDelegate.swift in Sources */,
+				F95099B51A6529880033F527 /* PeekViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
