@@ -12,7 +12,7 @@ class View2Controller: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     var imageView: UIImageView!
-     var containerView: UIView!
+    var containerView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         

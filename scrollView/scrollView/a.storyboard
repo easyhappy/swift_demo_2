@@ -25,37 +25,26 @@
                                     <rect key="frame" x="165" y="134" width="64" height="30"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="S34-9W-AG7" kind="showDetail" id="pCm-mT-Fyt"/>
+                                    <segue destination="yf3-hx-9kR" kind="showDetail" id="oKb-lf-aLe"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtv-Av-Wjv">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button 2">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="158" y="311" width="59" height="30"/>
-                                </variation>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Dqy-Fs-OpY"/>
-                                <exclude reference="vtv-Av-Wjv"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="Dqy-Fs-OpY"/>
-                                <include reference="vtv-Av-Wjv"/>
                             </mask>
                         </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ft0-Jp-k2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="304.5" y="247"/>
+            <point key="canvasLocation" x="457.5" y="201"/>
         </scene>
         <!--View2 Controller-->
         <scene sceneID="KaU-mH-zir">
@@ -66,12 +55,13 @@
                         <viewControllerLayoutGuide type="bottom" id="E7B-jh-MUD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ivw-Y3-o6s">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="820-YZ-pI3">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="-8" width="400" height="600"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 </variation>
                                 <connections>
                                     <outlet property="delegate" destination="yf3-hx-9kR" id="AV8-vo-SW4"/>
@@ -90,10 +80,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="820-YZ-pI3" id="npm-23-p8k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="THU-5o-SXv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="304.5" y="936"/>
+            <point key="canvasLocation" x="457.5" y="1009"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9nS-zG-eY4">
@@ -110,7 +103,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSe-SK-6x3">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 </variation>
                                 <connections>
                                     <outlet property="delegate" destination="S34-9W-AG7" id="dcL-DU-dzV"/>
@@ -135,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pPY-d0-msN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1045.5" y="247"/>
+            <point key="canvasLocation" x="1191" y="201"/>
         </scene>
     </scenes>
 </document>
