@@ -21,6 +21,7 @@
 		F9D5BB561A64078D000F0D9F /* photo5.png in Resources */ = {isa = PBXBuildFile; fileRef = F9D5BB501A64078D000F0D9F /* photo5.png */; };
 		F9D5BB571A64078D000F0D9F /* slow.png in Resources */ = {isa = PBXBuildFile; fileRef = F9D5BB511A64078D000F0D9F /* slow.png */; };
 		F9D5BB591A641259000F0D9F /* View2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5BB581A641259000F0D9F /* View2Controller.swift */; };
+		F9D5BB5B1A64182B000F0D9F /* a.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D5BB5A1A64182B000F0D9F /* a.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		F9D5BB501A64078D000F0D9F /* photo5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo5.png; sourceTree = "<group>"; };
 		F9D5BB511A64078D000F0D9F /* slow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slow.png; sourceTree = "<group>"; };
 		F9D5BB581A641259000F0D9F /* View2Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View2Controller.swift; sourceTree = "<group>"; };
+		F9D5BB5A1A64182B000F0D9F /* a.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = a.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				F964E5921A63DCF500C48C87 /* LaunchScreen.xib */,
 				F964E5881A63DCF500C48C87 /* scrollView.xcdatamodeld */,
 				F964E5841A63DCF500C48C87 /* Supporting Files */,
+				F9D5BB5A1A64182B000F0D9F /* a.storyboard */,
 			);
 			path = scrollView;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				F9D5BB541A64078D000F0D9F /* photo3.png in Resources */,
 				F9D5BB551A64078D000F0D9F /* photo4.png in Resources */,
 				F964E5941A63DCF500C48C87 /* LaunchScreen.xib in Resources */,
+				F9D5BB5B1A64182B000F0D9F /* a.storyboard in Resources */,
 				F9D5BB4B1A63FC83000F0D9F /* 2.jpg in Resources */,
 				F9D5BB571A64078D000F0D9F /* slow.png in Resources */,
 				F964E5911A63DCF500C48C87 /* Images.xcassets in Resources */,
