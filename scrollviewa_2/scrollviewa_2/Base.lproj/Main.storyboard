@@ -13,6 +13,7 @@
                         <viewControllerLayoutGuide type="bottom" id="9S4-Cj-XUc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kcF-pn-KXm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaH-VM-Lbp">
@@ -48,7 +49,7 @@
                                     <rect key="frame" x="106" y="466" width="59" height="30"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="7RI-Hu-oIy" kind="showDetail" id="XOt-yE-Weu"/>
+                                    <segue destination="0dX-GG-wNW" kind="showDetail" id="4rk-Ne-ZCZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -74,60 +75,62 @@
             <point key="canvasLocation" x="595.5" y="379"/>
         </scene>
         <!--Page View Controller-->
-        <scene sceneID="Ese-3Z-PCi">
+        <scene sceneID="TRP-hF-7rK">
             <objects>
-                <viewController id="7RI-Hu-oIy" customClass="PageViewController" customModule="scrollviewa_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0dX-GG-wNW" customClass="PageViewController" customModule="scrollviewa_2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8fQ-Tg-cFU"/>
-                        <viewControllerLayoutGuide type="bottom" id="gYa-r2-0Hq"/>
+                        <viewControllerLayoutGuide type="top" id="kXV-NW-vG0"/>
+                        <viewControllerLayoutGuide type="bottom" id="5KT-FX-iVJ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cbO-7J-E6M">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="view" contentMode="scaleToFill" id="ooT-4v-qnc">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Sy-ao-LBJ">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I0G-2e-J7A">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="rfQ-rC-Vtx">
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="sct-iS-i1j">
                                         <rect key="frame" x="-19" y="-18" width="39" height="37"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="181" y="455" width="39" height="37"/>
+                                            <rect key="frame" x="177" y="300" width="39" height="37"/>
                                         </variation>
                                     </pageControl>
                                 </subviews>
                                 <variation key="default">
                                     <mask key="subviews">
-                                        <exclude reference="rfQ-rC-Vtx"/>
+                                        <exclude reference="sct-iS-i1j"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="500"/>
+                                    <rect key="frame" x="7" y="216" width="403" height="337"/>
                                     <mask key="subviews">
-                                        <include reference="rfQ-rC-Vtx"/>
+                                        <include reference="sct-iS-i1j"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="0dX-GG-wNW" id="Tl5-mk-YNh"/>
+                                </connections>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="4Sy-ao-LBJ"/>
+                                <exclude reference="I0G-2e-J7A"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="4Sy-ao-LBJ"/>
+                                <include reference="I0G-2e-J7A"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="pageControl" destination="rfQ-rC-Vtx" id="faV-j8-l1u"/>
-                        <outlet property="scrollView" destination="4Sy-ao-LBJ" id="Tsb-NO-NJk"/>
+                        <outlet property="pageControl" destination="sct-iS-i1j" id="Ue7-7J-M0s"/>
+                        <outlet property="scrollView" destination="I0G-2e-J7A" id="hhc-qQ-Ap3"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XWz-Cj-Uny" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c5J-i1-rd5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="183" y="1128"/>
+            <point key="canvasLocation" x="294" y="1147"/>
         </scene>
         <!--View2 Controller-->
         <scene sceneID="0YT-Oi-Dig">
@@ -138,7 +141,7 @@
                         <viewControllerLayoutGuide type="bottom" id="XA1-Bg-dsq"/>
                     </layoutGuides>
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Kaj-Ny-EjM">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <connections>
                             <outlet property="delegate" destination="e6c-5o-H9x" id="cxt-7l-Rdz"/>
