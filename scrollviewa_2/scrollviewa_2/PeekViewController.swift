@@ -53,9 +53,12 @@ class PeekViewController: UIViewController, UIScrollViewDelegate {
         // 更新pageControl
         pageControl.currentPage = page
         
-        // 计算哪些页面需要加载
-        let firstPage = page - 1
-        let lastPage = page + 1
+//        // 计算哪些页面需要加载
+//        let firstPage = page - 1
+//        let lastPage = page + 1
+        
+        let firstPage = 0
+        let lastPage = 5
         
         // 清理firstPage之前页面
         for var index = 0; index < firstPage; ++index {
@@ -97,6 +100,7 @@ class PeekViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func purgePage(page: Int) {
+        
         if page < 0 || page >= pageImages.count {
             // 如果在显示的范围外，什么也不做
             return
@@ -111,6 +115,7 @@ class PeekViewController: UIViewController, UIScrollViewDelegate {
     
     func scrollViewDidScroll(scrollView: UIScrollView!) {
         // 加载现在在屏幕中的页面
+        println("是的")
         loadVisiblePages()
     }
     

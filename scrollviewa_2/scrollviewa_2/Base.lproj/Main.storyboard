@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="g3P-m1-zGk">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Peek View Controller-->
@@ -13,80 +12,89 @@
                         <viewControllerLayoutGuide type="top" id="zXM-TI-LQt"/>
                         <viewControllerLayoutGuide type="bottom" id="tOT-sb-j9I"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="BFd-nz-L5P" customClass="ScrollViewContainer" customModule="scrollviewa_2" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="BFd-nz-L5P">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Rge-Df-baK">
-                                <rect key="frame" x="-19" y="-18" width="39" height="37"/>
-                            </pageControl>
-                            <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EFv-m3-37g">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <outlet property="delegate" destination="T3L-iG-c6c" id="YDG-12-3hV"/>
-                                </connections>
-                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vRO-ox-R0l" customClass="ScrollViewContainer" customModule="scrollviewa_2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Rge-Df-baK">
+                                        <rect key="frame" x="-19" y="-18" width="39" height="37"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="-8" y="126" width="400" height="37"/>
+                                        </variation>
+                                    </pageControl>
+                                    <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFv-m3-37g">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="T3L-iG-c6c" id="YDG-12-3hV"/>
+                                        </connections>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="EFv-m3-37g" firstAttribute="leading" secondItem="vRO-ox-R0l" secondAttribute="leading" id="EY4-FA-PvJ"/>
+                                    <constraint firstItem="EFv-m3-37g" firstAttribute="top" secondItem="vRO-ox-R0l" secondAttribute="top" constant="2" id="cFm-bX-vee">
+                                        <variation key="widthClass=compact" constant="8"/>
+                                    </constraint>
+                                    <constraint firstAttribute="bottom" secondItem="EFv-m3-37g" secondAttribute="bottom" constant="10" id="gft-NG-pQM">
+                                        <variation key="widthClass=compact" constant="35"/>
+                                    </constraint>
+                                    <constraint firstAttribute="centerX" secondItem="EFv-m3-37g" secondAttribute="centerX" id="qRI-xz-Ktr"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="Rge-Df-baK"/>
+                                        <exclude reference="EFv-m3-37g"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="EY4-FA-PvJ"/>
+                                        <exclude reference="cFm-bX-vee"/>
+                                        <exclude reference="gft-NG-pQM"/>
+                                        <exclude reference="qRI-xz-Ktr"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="Rge-Df-baK"/>
+                                        <include reference="EFv-m3-37g"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="EY4-FA-PvJ"/>
+                                        <include reference="cFm-bX-vee"/>
+                                        <include reference="gft-NG-pQM"/>
+                                        <include reference="qRI-xz-Ktr"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.1458565848214286" green="0.1458565848214286" blue="0.1458565848214286" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.9294084821428571" green="0.9294084821428571" blue="0.9294084821428571" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="EFv-m3-37g" firstAttribute="leading" secondItem="BFd-nz-L5P" secondAttribute="leading" id="1ia-fl-8D9">
-                                <variation key="widthClass=compact" constant="100"/>
-                            </constraint>
-                            <constraint firstItem="tOT-sb-j9I" firstAttribute="top" secondItem="Rge-Df-baK" secondAttribute="bottom" constant="5" id="6ZX-dg-7Ra">
-                                <variation key="widthClass=compact" constant="13"/>
-                            </constraint>
-                            <constraint firstAttribute="centerX" secondItem="EFv-m3-37g" secondAttribute="centerX" id="TZk-ja-BNk">
-                                <variation key="widthClass=compact" constant="-6"/>
-                            </constraint>
-                            <constraint firstItem="Rge-Df-baK" firstAttribute="leading" secondItem="BFd-nz-L5P" secondAttribute="leading" constant="180" id="UrO-T9-901"/>
-                            <constraint firstItem="tOT-sb-j9I" firstAttribute="top" secondItem="EFv-m3-37g" secondAttribute="bottom" constant="5" id="Xtt-OK-9tf">
-                                <variation key="widthClass=compact" constant="169"/>
-                            </constraint>
-                            <constraint firstItem="Rge-Df-baK" firstAttribute="top" secondItem="zXM-TI-LQt" secondAttribute="bottom" constant="550" id="bfi-oh-aLr">
-                                <variation key="widthClass=compact" constant="530"/>
-                            </constraint>
-                            <constraint firstItem="EFv-m3-37g" firstAttribute="top" secondItem="BFd-nz-L5P" secondAttribute="topMargin" constant="-8" id="fZv-Sf-Iua">
-                                <variation key="widthClass=compact" constant="119"/>
-                            </constraint>
-                            <constraint firstAttribute="centerX" secondItem="EFv-m3-37g" secondAttribute="centerX" id="fhL-ly-Bd4">
-                                <variation key="widthClass=compact" constant="-6"/>
-                            </constraint>
-                            <constraint firstAttribute="centerY" secondItem="EFv-m3-37g" secondAttribute="centerY" id="sSs-2A-pz8">
-                                <variation key="widthClass=compact" constant="25"/>
-                            </constraint>
+                            <constraint firstItem="vRO-ox-R0l" firstAttribute="top" secondItem="zXM-TI-LQt" secondAttribute="bottom" constant="391" id="S6U-hp-862"/>
+                            <constraint firstItem="vRO-ox-R0l" firstAttribute="leading" secondItem="BFd-nz-L5P" secondAttribute="leading" id="T7X-yW-FLR"/>
+                            <constraint firstAttribute="trailing" secondItem="vRO-ox-R0l" secondAttribute="trailing" id="TbH-KJ-gEg"/>
+                            <constraint firstItem="tOT-sb-j9I" firstAttribute="top" secondItem="vRO-ox-R0l" secondAttribute="bottom" constant="26" id="xvB-f9-leV"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Rge-Df-baK"/>
-                                <exclude reference="EFv-m3-37g"/>
+                                <exclude reference="vRO-ox-R0l"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="1ia-fl-8D9"/>
-                                <exclude reference="TZk-ja-BNk"/>
-                                <exclude reference="fZv-Sf-Iua"/>
-                                <exclude reference="fhL-ly-Bd4"/>
-                                <exclude reference="sSs-2A-pz8"/>
-                                <exclude reference="UrO-T9-901"/>
-                                <exclude reference="bfi-oh-aLr"/>
-                                <exclude reference="6ZX-dg-7Ra"/>
-                                <exclude reference="Xtt-OK-9tf"/>
+                                <exclude reference="S6U-hp-862"/>
+                                <exclude reference="T7X-yW-FLR"/>
+                                <exclude reference="TbH-KJ-gEg"/>
+                                <exclude reference="xvB-f9-leV"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Rge-Df-baK"/>
-                                <include reference="EFv-m3-37g"/>
+                                <include reference="vRO-ox-R0l"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="1ia-fl-8D9"/>
-                                <include reference="TZk-ja-BNk"/>
-                                <include reference="fZv-Sf-Iua"/>
-                                <include reference="fhL-ly-Bd4"/>
-                                <include reference="sSs-2A-pz8"/>
-                                <include reference="UrO-T9-901"/>
-                                <include reference="bfi-oh-aLr"/>
-                                <include reference="6ZX-dg-7Ra"/>
-                                <include reference="Xtt-OK-9tf"/>
+                                <include reference="S6U-hp-862"/>
+                                <include reference="T7X-yW-FLR"/>
+                                <include reference="TbH-KJ-gEg"/>
+                                <include reference="xvB-f9-leV"/>
                             </mask>
                         </variation>
                     </view>
@@ -153,7 +161,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="228" y="518" width="59" height="30"/>
+                                    <rect key="frame" x="85" y="259" width="59" height="30"/>
                                 </variation>
                                 <connections>
                                     <segue destination="T3L-iG-c6c" kind="showDetail" id="Ckg-8V-seL"/>
