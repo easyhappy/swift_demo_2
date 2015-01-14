@@ -8,23 +8,31 @@
 
 import UIKit
 
-class Page2ViewController: UIViewController, UIScrollViewDelegate {
+class Page2ViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognizerDelegate{
+    
+    @IBOutlet var doubleTap: UITapGestureRecognizer!
+    
+    @IBOutlet var singleTap: UITapGestureRecognizer!
     
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var pageControl: UIPageControl!
     
+    @IBOutlet var viewDouble: UITapGestureRecognizer!
     
     var pageImages: [UIImage] = []
     var pageViews: [UIImageView?] = []
     var last_page = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        doubleTap.numberOfTapsRequired = 2
+        singleTap.numberOfTapsRequired = 1
+        self.singleTap.requireGestureRecognizerToFail(self.doubleTap)
         // 1
         pageImages.append(UIImage(named: "photo1.png")!)
         pageImages.append(UIImage(named: "photo2.png")!)
         pageImages.append(UIImage(named: "photo3.png")!)
         pageImages.append(UIImage(named: "photo4.png")!)
+        pageImages.append(UIImage(named: "photo5.png")!)
         pageImages.append(UIImage(named: "photo5.png")!)
         
         let pageCount = pageImages.count
@@ -69,8 +77,12 @@ class Page2ViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
+    @IBAction func doubleTapDeal(){
+        println(" good is yes ")
+    }
+
+    
     func loadChildPage(page: Int){
-        println("page is \(page)")
         if page >= pageViews.count{
             return
         }
@@ -84,6 +96,12 @@ class Page2ViewController: UIViewController, UIScrollViewDelegate {
             
             // 3
             let newPageView = UIImageView(image: pageImages[page])
+            var doubleTapRecognizer = UITapGestureRecognizer(target: self, action: "scrollViewDoubleTapped:")
+            doubleTapRecognizer.numberOfTapsRequired = 2
+            doubleTapRecognizer.numberOfTouchesRequired = 1
+            scrollView.addGestureRecognizer(doubleTapRecognizer)
+            
+            
             newPageView.contentMode = .ScaleAspectFit
             var xLoca = CGFloat(page) * CGFloat(self.view.frame.size.width)/3
             newPageView.frame =  CGRectMake(xLoca, 0, self.view.frame.size.width/3, 200)
@@ -92,6 +110,18 @@ class Page2ViewController: UIViewController, UIScrollViewDelegate {
             // 4
             pageViews[page] = newPageView
         }
+    }
+    
+    
+    
+    func scrollViewDoubleTapped(recognizer: UITapGestureRecognizer) {
+        var a = self.view.frame.size.width/3
+        var x = recognizer.locationInView(self.scrollView).x
+        var c = Int(x*1.0/a)
+
+        println("double click: \(x)  is the \(c) Int c is \(Int(c))")
+        
+        
     }
     
     
@@ -115,8 +145,7 @@ class Page2ViewController: UIViewController, UIScrollViewDelegate {
         let pageWidth = scrollView.frame.size.width
         var page = Int(floor((scrollView.contentOffset.x * 2.0 + pageWidth) / (pageWidth * 2.0)))
         //page = Int(scrollView.contentOffset.x/pageWidth)
-        println("contentOffset: \(scrollView.contentOffset)")
-        println("last_page: \(last_page); page \(page)")
+       
         if page > last_page{
             last_page += 1
         }
