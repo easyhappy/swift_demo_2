@@ -16,6 +16,7 @@ class PageViewController: UIViewController, UIScrollViewDelegate {
     
     var pageImages: [UIImage] = []
     var pageViews: [UIImageView?] = []
+    var last_page = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,13 +38,9 @@ class PageViewController: UIViewController, UIScrollViewDelegate {
             pageViews.append(nil)
         }
         
-        // 4
-        let pagesScrollViewSize = scrollView.frame.size
-        scrollView.contentSize = CGSize(width: pagesScrollViewSize.width * CGFloat(pageImages.count),
-            height: pagesScrollViewSize.height)
-        
         // 5
         loadVisiblePages()
+         self.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 200, 0);
     }
     
     func loadPage(page: Int) {
@@ -88,21 +85,37 @@ class PageViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func loadVisiblePages() {
+        
         // 首先确定当前可见的页面
         let pageWidth = scrollView.frame.size.width
-        let page = Int(floor((scrollView.contentOffset.x * 2.0 + pageWidth) / (pageWidth * 2.0)))
+        var page = Int(floor((scrollView.contentOffset.x * 2.0 + pageWidth) / (pageWidth * 2.0)))
+        println("contentOffset: \(scrollView.contentOffset)")
+        println("last_page: \(last_page); page \(page)")
+        if page > last_page{
+            last_page += 1
+        }
+        if page < last_page{
+            last_page -= 1
+        }
+        if last_page < 0{
+            last_page = 0
+        }
+        if last_page > self.pageImages.count{
+            last_page = self.pageImages.count
+        }
+        //page = last_page
+
         
         // 更新pageControl
-        pageControl.currentPage = page
+        pageControl.currentPage = last_page
         
         // 计算那些页面需要加载
-        var firstPage = page - 1
-        var lastPage = page + 1
+        var firstPage = last_page - 1
+        var lastPage = last_page + 1
        
-        println("firtPage: \(firstPage) lastPage\(lastPage)")
         // 清理firstPage之前的所有页面
         for var index = 0; index < firstPage; ++index {
-            purgePage(index)
+            //purgePage(index)
         }
         
         // 加载范围内（firstPage到lastPage之间）的所有页面
@@ -112,8 +125,12 @@ class PageViewController: UIViewController, UIScrollViewDelegate {
         
         // 清理lastPage之后的所有页面
         for var index = lastPage+1; index < pageImages.count; ++index {
-            purgePage(index)
+            //purgePage(index)
         }
+        
+        let pagesScrollViewSize = scrollView.frame.size
+        scrollView.contentSize = CGSize(width: pagesScrollViewSize.width * CGFloat(pageImages.count),
+            height: pagesScrollViewSize.height)
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView!) {
