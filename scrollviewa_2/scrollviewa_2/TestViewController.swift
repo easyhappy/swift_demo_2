@@ -52,7 +52,7 @@ class TestViewController: UIViewController ,UIScrollViewDelegate{
             
             button.setTitleColor(UIColor.whiteColor(), forState:.Normal)
             
-            button.setTitle("点击按钮", forState: UIControlState.Normal)
+            button.setTitle("点击按钮\(indexInt)", forState: UIControlState.Normal)
             
             button.titleLabel!.font = UIFont.boldSystemFontOfSize(CGFloat(25))
             

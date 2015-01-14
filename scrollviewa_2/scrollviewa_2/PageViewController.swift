@@ -40,7 +40,14 @@ class PageViewController: UIViewController, UIScrollViewDelegate {
         
         // 5
         loadVisiblePages()
-         self.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 200, 0);
+        scrollView.showsHorizontalScrollIndicator = false
+        
+        scrollView.showsVerticalScrollIndicator = false
+        
+//        scrollView.contentSize = CGSizeMake(5*self.view.frame.size.width, 200)
+//        
+//        scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+        
     }
     
     func loadPage(page: Int) {
@@ -89,6 +96,7 @@ class PageViewController: UIViewController, UIScrollViewDelegate {
         // 首先确定当前可见的页面
         let pageWidth = scrollView.frame.size.width
         var page = Int(floor((scrollView.contentOffset.x * 2.0 + pageWidth) / (pageWidth * 2.0)))
+        page = Int(scrollView.contentOffset.x/pageWidth)
         println("contentOffset: \(scrollView.contentOffset)")
         println("last_page: \(last_page); page \(page)")
         if page > last_page{
