@@ -38,11 +38,18 @@ class PageViewController: UIViewController, UIScrollViewDelegate {
             pageViews.append(nil)
         }
         
-        // 5
-        loadVisiblePages()
-        scrollView.showsHorizontalScrollIndicator = false
+        let pagesScrollViewSize = scrollView.frame.size
+        scrollView.contentSize = CGSize(width: pagesScrollViewSize.width * CGFloat(pageImages.count),
+            height: pagesScrollViewSize.height)
         
-        scrollView.showsVerticalScrollIndicator = false
+        // 5
+        scrollView.contentSize = CGSizeMake(5*self.view.frame.size.width, 200)
+        
+        //scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+        loadVisiblePages()
+//        scrollView.showsHorizontalScrollIndicator = false
+//        
+//        scrollView.showsVerticalScrollIndicator = false
         
 //        scrollView.contentSize = CGSizeMake(5*self.view.frame.size.width, 200)
 //        
@@ -68,12 +75,14 @@ class PageViewController: UIViewController, UIScrollViewDelegate {
             // 3
             let newPageView = UIImageView(image: pageImages[page])
             newPageView.contentMode = .ScaleAspectFit
-            newPageView.frame = frame
+            var xLoca = CGFloat(page) * CGFloat(self.view.frame.size.width)
+            newPageView.frame =  CGRectMake(xLoca, 0, self.view.frame.size.width, 200)
             scrollView.addSubview(newPageView)
             
             // 4
             pageViews[page] = newPageView
         }
+        
     }
     
     
@@ -96,7 +105,7 @@ class PageViewController: UIViewController, UIScrollViewDelegate {
         // 首先确定当前可见的页面
         let pageWidth = scrollView.frame.size.width
         var page = Int(floor((scrollView.contentOffset.x * 2.0 + pageWidth) / (pageWidth * 2.0)))
-        page = Int(scrollView.contentOffset.x/pageWidth)
+        //page = Int(scrollView.contentOffset.x/pageWidth)
         println("contentOffset: \(scrollView.contentOffset)")
         println("last_page: \(last_page); page \(page)")
         if page > last_page{
@@ -136,9 +145,7 @@ class PageViewController: UIViewController, UIScrollViewDelegate {
             //purgePage(index)
         }
         
-        let pagesScrollViewSize = scrollView.frame.size
-        scrollView.contentSize = CGSize(width: pagesScrollViewSize.width * CGFloat(pageImages.count),
-            height: pagesScrollViewSize.height)
+        
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView!) {

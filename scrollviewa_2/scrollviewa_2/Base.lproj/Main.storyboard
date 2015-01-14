@@ -243,13 +243,13 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="I0G-2e-J7A" secondAttribute="trailing" id="7dT-Bn-Iwr">
-                                <variation key="widthClass=compact" constant="84"/>
+                                <variation key="widthClass=compact" constant="-16"/>
                             </constraint>
                             <constraint firstItem="sct-iS-i1j" firstAttribute="leading" secondItem="ooT-4v-qnc" secondAttribute="leadingMargin" id="Kq1-Jv-zOI">
                                 <variation key="widthClass=compact" constant="-16"/>
                             </constraint>
                             <constraint firstItem="I0G-2e-J7A" firstAttribute="leading" secondItem="ooT-4v-qnc" secondAttribute="leadingMargin" id="KwH-QE-1kl">
-                                <variation key="widthClass=compact" constant="84"/>
+                                <variation key="widthClass=compact" constant="-16"/>
                             </constraint>
                             <constraint firstAttribute="centerX" secondItem="sct-iS-i1j" secondAttribute="centerX" id="ONF-AU-EyP"/>
                             <constraint firstItem="I0G-2e-J7A" firstAttribute="top" secondItem="kXV-NW-vG0" secondAttribute="bottom" constant="30" id="TDE-RK-XxW">
