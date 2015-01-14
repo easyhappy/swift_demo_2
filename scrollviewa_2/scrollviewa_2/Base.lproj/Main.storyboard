@@ -46,7 +46,7 @@
                             </constraint>
                             <constraint firstItem="Nod-Gd-qtq" firstAttribute="top" secondItem="6Gi-TJ-Y9H" secondAttribute="bottom" constant="21" id="5EI-dX-43B"/>
                             <constraint firstAttribute="centerX" secondItem="Nod-Gd-qtq" secondAttribute="centerX" id="KHu-W9-doO"/>
-                            <constraint firstItem="6Gi-TJ-Y9H" firstAttribute="top" secondItem="7aR-P1-kca" secondAttribute="bottom" constant="322" id="T0Z-HL-PIL"/>
+                            <constraint firstItem="6Gi-TJ-Y9H" firstAttribute="top" relation="lessThanOrEqual" secondItem="7aR-P1-kca" secondAttribute="bottom" constant="322" id="T0Z-HL-PIL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6Gi-TJ-Y9H" secondAttribute="trailing" id="VL5-Gn-ClU">
                                 <variation key="widthClass=compact" constant="-16"/>
                             </constraint>
