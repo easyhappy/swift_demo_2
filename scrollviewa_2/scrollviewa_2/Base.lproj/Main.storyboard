@@ -14,6 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="tOT-sb-j9I"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BFd-nz-L5P">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Rge-Df-baK">
@@ -85,14 +86,14 @@
                                 <exclude reference="vRO-ox-R0l"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="OjJ-XL-jbd"/>
+                                <exclude reference="sQN-0f-ITb"/>
                                 <exclude reference="4vI-Zs-poy"/>
                                 <exclude reference="DrP-Et-8mS"/>
                                 <exclude reference="dU5-yt-3ga"/>
                                 <exclude reference="eks-ky-9Fi"/>
                                 <exclude reference="ju9-Le-spN"/>
                                 <exclude reference="u2N-0O-qJZ"/>
-                                <exclude reference="sQN-0f-ITb"/>
-                                <exclude reference="OjJ-XL-jbd"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -101,14 +102,14 @@
                                 <include reference="vRO-ox-R0l"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="OjJ-XL-jbd"/>
+                                <include reference="sQN-0f-ITb"/>
                                 <include reference="4vI-Zs-poy"/>
                                 <include reference="DrP-Et-8mS"/>
                                 <include reference="dU5-yt-3ga"/>
                                 <include reference="eks-ky-9Fi"/>
                                 <include reference="ju9-Le-spN"/>
                                 <include reference="u2N-0O-qJZ"/>
-                                <include reference="sQN-0f-ITb"/>
-                                <include reference="OjJ-XL-jbd"/>
                             </mask>
                         </variation>
                     </view>
@@ -228,6 +229,7 @@
                         <viewControllerLayoutGuide type="bottom" id="5KT-FX-iVJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ooT-4v-qnc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="sct-iS-i1j">
@@ -251,9 +253,6 @@
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I0G-2e-J7A">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="331" width="400" height="200"/>
-                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="0dX-GG-wNW" id="Tl5-mk-YNh"/>
                                 </connections>
@@ -299,18 +298,18 @@
                                 <exclude reference="I0G-2e-J7A"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="NiX-qY-BmO"/>
-                                <exclude reference="W5y-nr-nCg"/>
-                                <exclude reference="eZP-IZ-SeR"/>
-                                <exclude reference="s39-7u-J3O"/>
+                                <exclude reference="DN7-nD-Hyg"/>
+                                <exclude reference="mR4-qS-hyD"/>
                                 <exclude reference="3By-hQ-Mmh"/>
                                 <exclude reference="7dT-Bn-Iwr"/>
                                 <exclude reference="KwH-QE-1kl"/>
                                 <exclude reference="Xqd-Cg-mqZ"/>
                                 <exclude reference="qt2-V2-Ezx"/>
                                 <exclude reference="sMD-Hq-fnu"/>
-                                <exclude reference="mR4-qS-hyD"/>
-                                <exclude reference="DN7-nD-Hyg"/>
+                                <exclude reference="NiX-qY-BmO"/>
+                                <exclude reference="W5y-nr-nCg"/>
+                                <exclude reference="eZP-IZ-SeR"/>
+                                <exclude reference="s39-7u-J3O"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -320,18 +319,18 @@
                                 <include reference="I0G-2e-J7A"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="NiX-qY-BmO"/>
-                                <include reference="W5y-nr-nCg"/>
-                                <include reference="eZP-IZ-SeR"/>
-                                <include reference="s39-7u-J3O"/>
+                                <include reference="DN7-nD-Hyg"/>
+                                <include reference="mR4-qS-hyD"/>
                                 <include reference="3By-hQ-Mmh"/>
                                 <include reference="7dT-Bn-Iwr"/>
                                 <include reference="KwH-QE-1kl"/>
                                 <include reference="Xqd-Cg-mqZ"/>
                                 <include reference="qt2-V2-Ezx"/>
                                 <include reference="sMD-Hq-fnu"/>
-                                <include reference="mR4-qS-hyD"/>
-                                <include reference="DN7-nD-Hyg"/>
+                                <include reference="NiX-qY-BmO"/>
+                                <include reference="W5y-nr-nCg"/>
+                                <include reference="eZP-IZ-SeR"/>
+                                <include reference="s39-7u-J3O"/>
                             </mask>
                         </variation>
                     </view>
@@ -376,6 +375,7 @@
                         <viewControllerLayoutGuide type="bottom" id="a9d-bB-K5d"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="W92-Iq-IMb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
