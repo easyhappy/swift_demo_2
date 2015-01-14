@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PageViewController: UIViewController, UIScrollViewDelegate {
+class Page2ViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var pageControl: UIPageControl!
@@ -26,7 +26,7 @@ class PageViewController: UIViewController, UIScrollViewDelegate {
         pageImages.append(UIImage(named: "photo3.png")!)
         pageImages.append(UIImage(named: "photo4.png")!)
         pageImages.append(UIImage(named: "photo5.png")!)
-
+        
         let pageCount = pageImages.count
         
         // 2
@@ -48,12 +48,12 @@ class PageViewController: UIViewController, UIScrollViewDelegate {
         //scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
         loadVisiblePages()
         scrollView.showsHorizontalScrollIndicator = false
-//        
+        //
         scrollView.showsVerticalScrollIndicator = false
         
-//        scrollView.contentSize = CGSizeMake(5*self.view.frame.size.width, 200)
-//        
-//        scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+        //        scrollView.contentSize = CGSizeMake(5*self.view.frame.size.width, 200)
+        //
+        //        scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
         
     }
     
@@ -121,7 +121,7 @@ class PageViewController: UIViewController, UIScrollViewDelegate {
             last_page = self.pageImages.count
         }
         //page = last_page
-
+        
         
         // 更新pageControl
         pageControl.currentPage = last_page
@@ -129,7 +129,7 @@ class PageViewController: UIViewController, UIScrollViewDelegate {
         // 计算那些页面需要加载
         var firstPage = last_page - 1
         var lastPage = last_page + 1
-       
+        
         // 清理firstPage之前的所有页面
         for var index = 0; index < firstPage; ++index {
             //purgePage(index)

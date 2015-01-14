@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F903FFCB1A6667E200B21C3C /* Page2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F903FFCA1A6667E200B21C3C /* Page2ViewController.swift */; };
 		F92EAD0E1A64B15200A74998 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92EAD0D1A64B15200A74998 /* AppDelegate.swift */; };
 		F92EAD111A64B15200A74998 /* scrollviewa_2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F92EAD0F1A64B15200A74998 /* scrollviewa_2.xcdatamodeld */; };
 		F92EAD131A64B15200A74998 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92EAD121A64B15200A74998 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F903FFCA1A6667E200B21C3C /* Page2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page2ViewController.swift; sourceTree = "<group>"; };
 		F92EAD081A64B15200A74998 /* scrollviewa_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scrollviewa_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F92EAD0C1A64B15200A74998 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F92EAD0D1A64B15200A74998 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				F95099B41A6529880033F527 /* PeekViewController.swift */,
 				F95099B61A652C4D0033F527 /* ScrollViewContainer.swift */,
 				F95099B81A661BA50033F527 /* TestViewController.swift */,
+				F903FFCA1A6667E200B21C3C /* Page2ViewController.swift */,
 			);
 			path = scrollviewa_2;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				F92EAD3F1A64B40300A74998 /* PageViewController.swift in Sources */,
 				F95099B91A661BA50033F527 /* TestViewController.swift in Sources */,
 				F95099B71A652C4D0033F527 /* ScrollViewContainer.swift in Sources */,
+				F903FFCB1A6667E200B21C3C /* Page2ViewController.swift in Sources */,
 				F92EAD311A64B1B800A74998 /* View2Controller.swift in Sources */,
 				F92EAD111A64B15200A74998 /* scrollviewa_2.xcdatamodeld in Sources */,
 				F92EAD0E1A64B15200A74998 /* AppDelegate.swift in Sources */,
