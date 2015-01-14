@@ -31,7 +31,7 @@ class Page2ViewController: UIViewController, UIScrollViewDelegate {
         
         // 2
         pageControl.currentPage = 0
-        pageControl.numberOfPages = 5
+        pageControl.numberOfPages = 2
         
         // 3
         for _ in 0..<pageCount {
@@ -63,7 +63,17 @@ class Page2ViewController: UIViewController, UIScrollViewDelegate {
             return
         }
         
-        // 1
+        for i in (page*3)...((page+1)*3-1){
+            loadChildPage(i)
+        }
+        
+    }
+    
+    func loadChildPage(page: Int){
+        println("page is \(page)")
+        if page >= pageViews.count{
+            return
+        }
         if let pageView = pageViews[page] {
             // 页面已经加载，不需要额外操作
         } else {
@@ -75,14 +85,13 @@ class Page2ViewController: UIViewController, UIScrollViewDelegate {
             // 3
             let newPageView = UIImageView(image: pageImages[page])
             newPageView.contentMode = .ScaleAspectFit
-            var xLoca = CGFloat(page) * CGFloat(self.view.frame.size.width)
-            newPageView.frame =  CGRectMake(xLoca, 0, self.view.frame.size.width, 200)
+            var xLoca = CGFloat(page) * CGFloat(self.view.frame.size.width)/3
+            newPageView.frame =  CGRectMake(xLoca, 0, self.view.frame.size.width/3, 200)
             scrollView.addSubview(newPageView)
             
             // 4
             pageViews[page] = newPageView
         }
-        
     }
     
     
