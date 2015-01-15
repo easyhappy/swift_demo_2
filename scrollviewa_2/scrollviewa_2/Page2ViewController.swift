@@ -26,6 +26,7 @@ class Page2ViewController: UIViewController, UIScrollViewDelegate, UIGestureReco
     var pageImages: [UIImage] = []
     var pageViews: [UIImageView?] = []
     var last_page = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         doubleTap.numberOfTapsRequired = 2
@@ -38,6 +39,7 @@ class Page2ViewController: UIViewController, UIScrollViewDelegate, UIGestureReco
         pageImages.append(UIImage(named: "photo4.png")!)
         pageImages.append(UIImage(named: "photo5.png")!)
         pageImages.append(UIImage(named: "photo5.png")!)
+        
         
         let pageCount = pageImages.count
         
