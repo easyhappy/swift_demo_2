@@ -17,9 +17,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Nod-Gd-qtq">
+                            <pageControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Nod-Gd-qtq">
                                 <rect key="frame" x="-19" y="-18" width="39" height="37"/>
                             </pageControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo1.png" translatesAutoresizingMaskIntoConstraints="NO" id="wFI-Z6-p4m">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="zBN-FI-noX"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="zBN-FI-noX"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="zBN-FI-noX"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="tFc-bw-xC3" appends="YES" id="Jl3-mL-cql"/>
+                                    <outletCollection property="gestureRecognizers" destination="4xg-W8-46H" appends="YES" id="uGw-I9-CFY"/>
+                                </connections>
+                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Gi-TJ-Y9H">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
@@ -39,17 +60,6 @@
                                     <outlet property="delegate" destination="iQw-F1-9f4" id="zQH-CP-qx8"/>
                                 </connections>
                             </scrollView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo1.png" translatesAutoresizingMaskIntoConstraints="NO" id="wFI-Z6-p4m">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <gestureRecognizers/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="64" y="179" width="240" height="128"/>
-                                </variation>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="tFc-bw-xC3" appends="YES" id="Jl3-mL-cql"/>
-                                    <outletCollection property="gestureRecognizers" destination="4xg-W8-46H" appends="YES" id="uGw-I9-CFY"/>
-                                </connections>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -57,18 +67,25 @@
                             <constraint firstItem="Nod-Gd-qtq" firstAttribute="leading" secondItem="WZm-i8-WSo" secondAttribute="leadingMargin" id="4tB-lb-sDg">
                                 <variation key="widthClass=compact" constant="-16"/>
                             </constraint>
-                            <constraint firstItem="Nod-Gd-qtq" firstAttribute="top" secondItem="6Gi-TJ-Y9H" secondAttribute="bottom" constant="21" id="5EI-dX-43B"/>
+                            <constraint firstItem="Nod-Gd-qtq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Gi-TJ-Y9H" secondAttribute="bottom" constant="21" id="5EI-dX-43B">
+                                <variation key="widthClass=compact" constant="19"/>
+                            </constraint>
+                            <constraint firstItem="wFI-Z6-p4m" firstAttribute="top" secondItem="WZm-i8-WSo" secondAttribute="topMargin" id="JzV-5u-y5R"/>
                             <constraint firstAttribute="centerX" secondItem="Nod-Gd-qtq" secondAttribute="centerX" id="KHu-W9-doO"/>
-                            <constraint firstItem="6Gi-TJ-Y9H" firstAttribute="top" relation="lessThanOrEqual" secondItem="7aR-P1-kca" secondAttribute="bottom" constant="322" id="T0Z-HL-PIL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6Gi-TJ-Y9H" secondAttribute="trailing" id="VL5-Gn-ClU">
                                 <variation key="widthClass=compact" constant="-16"/>
                             </constraint>
+                            <constraint firstItem="wFI-Z6-p4m" firstAttribute="leading" secondItem="6Gi-TJ-Y9H" secondAttribute="leading" id="Wot-Rx-unF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Nod-Gd-qtq" secondAttribute="trailing" id="dI6-Gv-WCU">
                                 <variation key="widthClass=compact" constant="-16"/>
                             </constraint>
-                            <constraint firstItem="lJo-eF-Y4O" firstAttribute="top" secondItem="Nod-Gd-qtq" secondAttribute="bottom" constant="1" id="hby-yc-7jm">
+                            <constraint firstItem="6Gi-TJ-Y9H" firstAttribute="top" secondItem="wFI-Z6-p4m" secondAttribute="bottom" constant="30" id="fXH-TG-xFg">
+                                <variation key="widthClass=compact" constant="144"/>
+                            </constraint>
+                            <constraint firstItem="lJo-eF-Y4O" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Nod-Gd-qtq" secondAttribute="bottom" constant="1" id="hby-yc-7jm">
                                 <variation key="widthClass=compact" constant="0.0"/>
                             </constraint>
+                            <constraint firstItem="wFI-Z6-p4m" firstAttribute="trailing" secondItem="6Gi-TJ-Y9H" secondAttribute="trailing" id="ia7-SK-TPH"/>
                             <constraint firstItem="6Gi-TJ-Y9H" firstAttribute="leading" secondItem="WZm-i8-WSo" secondAttribute="leadingMargin" id="wEE-Nn-HaQ">
                                 <variation key="widthClass=compact" constant="-16"/>
                             </constraint>
@@ -76,35 +93,41 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Nod-Gd-qtq"/>
-                                <exclude reference="6Gi-TJ-Y9H"/>
                                 <exclude reference="wFI-Z6-p4m"/>
+                                <exclude reference="6Gi-TJ-Y9H"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="hby-yc-7jm"/>
+                                <exclude reference="JzV-5u-y5R"/>
+                                <exclude reference="Wot-Rx-unF"/>
+                                <exclude reference="ia7-SK-TPH"/>
+                                <exclude reference="VL5-Gn-ClU"/>
+                                <exclude reference="fXH-TG-xFg"/>
+                                <exclude reference="wEE-Nn-HaQ"/>
                                 <exclude reference="4tB-lb-sDg"/>
                                 <exclude reference="5EI-dX-43B"/>
                                 <exclude reference="KHu-W9-doO"/>
                                 <exclude reference="dI6-Gv-WCU"/>
-                                <exclude reference="T0Z-HL-PIL"/>
-                                <exclude reference="VL5-Gn-ClU"/>
-                                <exclude reference="wEE-Nn-HaQ"/>
+                                <exclude reference="hby-yc-7jm"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="Nod-Gd-qtq"/>
-                                <include reference="6Gi-TJ-Y9H"/>
                                 <include reference="wFI-Z6-p4m"/>
+                                <include reference="6Gi-TJ-Y9H"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="hby-yc-7jm"/>
+                                <include reference="JzV-5u-y5R"/>
+                                <include reference="Wot-Rx-unF"/>
+                                <include reference="ia7-SK-TPH"/>
+                                <include reference="VL5-Gn-ClU"/>
+                                <include reference="fXH-TG-xFg"/>
+                                <include reference="wEE-Nn-HaQ"/>
                                 <include reference="4tB-lb-sDg"/>
                                 <include reference="5EI-dX-43B"/>
                                 <include reference="KHu-W9-doO"/>
                                 <include reference="dI6-Gv-WCU"/>
-                                <include reference="T0Z-HL-PIL"/>
-                                <include reference="VL5-Gn-ClU"/>
-                                <include reference="wEE-Nn-HaQ"/>
+                                <include reference="hby-yc-7jm"/>
                             </mask>
                         </variation>
                         <connections>
@@ -112,8 +135,12 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="a" destination="5EI-dX-43B" id="1so-9M-Rus"/>
+                        <outlet property="b" destination="fXH-TG-xFg" id="ylD-sf-1s9"/>
                         <outlet property="doubleTap" destination="tFc-bw-xC3" id="NW9-hD-2Eq"/>
                         <outlet property="pageControl" destination="Nod-Gd-qtq" id="sr3-jJ-ZMB"/>
+                        <outlet property="scrollHeight" destination="dJa-Yw-Kcj" id="DvI-8a-yhm"/>
+                        <outlet property="scrollTop" destination="fXH-TG-xFg" id="a2n-gN-y12"/>
                         <outlet property="scrollView" destination="6Gi-TJ-Y9H" id="QKQ-h5-oXh"/>
                         <outlet property="singleTap" destination="4xg-W8-46H" id="cHc-il-sWL"/>
                         <outlet property="viewDouble" destination="dep-Lu-qvT" id="Bix-iA-Fkf"/>

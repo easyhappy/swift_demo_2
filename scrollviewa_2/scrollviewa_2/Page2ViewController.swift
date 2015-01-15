@@ -10,8 +10,12 @@ import UIKit
 
 class Page2ViewController: UIViewController, UIScrollViewDelegate, UIGestureRecognizerDelegate{
     
+    @IBOutlet weak var b: NSLayoutConstraint!
+    @IBOutlet weak var a: NSLayoutConstraint!
     @IBOutlet var doubleTap: UITapGestureRecognizer!
     
+    @IBOutlet weak var scrollHeight: NSLayoutConstraint!
+    @IBOutlet weak var scrollTop: NSLayoutConstraint!
     @IBOutlet var singleTap: UITapGestureRecognizer!
     
     @IBOutlet var scrollView: UIScrollView!
@@ -58,6 +62,7 @@ class Page2ViewController: UIViewController, UIScrollViewDelegate, UIGestureReco
         scrollView.showsHorizontalScrollIndicator = false
         //
         scrollView.showsVerticalScrollIndicator = false
+        
         
         //        scrollView.contentSize = CGSizeMake(5*self.view.frame.size.width, 200)
         //
@@ -189,6 +194,16 @@ class Page2ViewController: UIViewController, UIScrollViewDelegate, UIGestureReco
     func scrollViewDidScroll(scrollView: UIScrollView!) {
         // Load the pages that are now on screen
         loadVisiblePages()
+//        sleep(3)
+    
+        self.scrollView.hidden = true
+        //self.scrollView.removeFromSuperview()
+        self.scrollView.frame.size.height = 0
+       
+        scrollHeight.constant = 0
+        scrollTop.constant = 0
+        println("a.contant \(a.constant)")
+       
     }
     
     override func didReceiveMemoryWarning() {
