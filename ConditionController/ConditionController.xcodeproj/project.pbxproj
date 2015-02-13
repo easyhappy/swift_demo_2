@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		82CDA7F719B6C9A1002B14FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CDA7F619B6C9A1002B14FE /* Foundation.framework */; };
+		82CDA7F919B6C9A1002B14FE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CDA7F819B6C9A1002B14FE /* CoreGraphics.framework */; };
+		82CDA7FB19B6C9A1002B14FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CDA7FA19B6C9A1002B14FE /* UIKit.framework */; };
+		82CDA80119B6C9A1002B14FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82CDA7FF19B6C9A1002B14FE /* InfoPlist.strings */; };
+		82CDA80319B6C9A1002B14FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CDA80219B6C9A1002B14FE /* main.m */; };
+		82CDA80719B6C9A1002B14FE /* ConditionAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CDA80619B6C9A1002B14FE /* ConditionAppDelegate.m */; };
+		82CDA80A19B6C9A1002B14FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82CDA80819B6C9A1002B14FE /* Main.storyboard */; };
+		82CDA80D19B6C9A1002B14FE /* ConditionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CDA80C19B6C9A1002B14FE /* ConditionViewController.m */; };
+		82CDA80F19B6C9A1002B14FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82CDA80E19B6C9A1002B14FE /* Images.xcassets */; };
+		82CDA81619B6C9A1002B14FE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CDA81519B6C9A1002B14FE /* XCTest.framework */; };
+		82CDA81719B6C9A1002B14FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CDA7F619B6C9A1002B14FE /* Foundation.framework */; };
+		82CDA81819B6C9A1002B14FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CDA7FA19B6C9A1002B14FE /* UIKit.framework */; };
+		82CDA82019B6C9A1002B14FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82CDA81E19B6C9A1002B14FE /* InfoPlist.strings */; };
+		82CDA82219B6C9A1002B14FE /* ConditionControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CDA82119B6C9A1002B14FE /* ConditionControllerTests.m */; };
+		82CDA82E19B6D838002B14FE /* SynptomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CDA82C19B6D837002B14FE /* SynptomCell.m */; };
+		82CDA82F19B6D838002B14FE /* SynptomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82CDA82D19B6D837002B14FE /* SynptomCell.xib */; };
+		82CDA83519B6D873002B14FE /* EnterPay01.png in Resources */ = {isa = PBXBuildFile; fileRef = 82CDA83019B6D873002B14FE /* EnterPay01.png */; };
+		82CDA83619B6D873002B14FE /* EnterPay01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82CDA83119B6D873002B14FE /* EnterPay01@2x.png */; };
+		82CDA83719B6D873002B14FE /* EnterPay02.png in Resources */ = {isa = PBXBuildFile; fileRef = 82CDA83219B6D873002B14FE /* EnterPay02.png */; };
+		82CDA83819B6D873002B14FE /* EnterPay02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82CDA83319B6D873002B14FE /* EnterPay02@2x.png */; };
+		82CDA83919B6D873002B14FE /* X.png in Resources */ = {isa = PBXBuildFile; fileRef = 82CDA83419B6D873002B14FE /* X.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		82CDA81919B6C9A1002B14FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82CDA7EB19B6C9A1002B14FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82CDA7F219B6C9A1002B14FE;
+			remoteInfo = ConditionController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		82CDA7F319B6C9A1002B14FE /* ConditionController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConditionController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		82CDA7F619B6C9A1002B14FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		82CDA7F819B6C9A1002B14FE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		82CDA7FA19B6C9A1002B14FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		82CDA7FE19B6C9A1002B14FE /* ConditionController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ConditionController-Info.plist"; sourceTree = "<group>"; };
+		82CDA80019B6C9A1002B14FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		82CDA80219B6C9A1002B14FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		82CDA80419B6C9A1002B14FE /* ConditionController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ConditionController-Prefix.pch"; sourceTree = "<group>"; };
+		82CDA80519B6C9A1002B14FE /* ConditionAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConditionAppDelegate.h; sourceTree = "<group>"; };
+		82CDA80619B6C9A1002B14FE /* ConditionAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConditionAppDelegate.m; sourceTree = "<group>"; };
+		82CDA80919B6C9A1002B14FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		82CDA80B19B6C9A1002B14FE /* ConditionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConditionViewController.h; sourceTree = "<group>"; };
+		82CDA80C19B6C9A1002B14FE /* ConditionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConditionViewController.m; sourceTree = "<group>"; };
+		82CDA80E19B6C9A1002B14FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		82CDA81419B6C9A1002B14FE /* ConditionControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConditionControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		82CDA81519B6C9A1002B14FE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		82CDA81D19B6C9A1002B14FE /* ConditionControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ConditionControllerTests-Info.plist"; sourceTree = "<group>"; };
+		82CDA81F19B6C9A1002B14FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		82CDA82119B6C9A1002B14FE /* ConditionControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConditionControllerTests.m; sourceTree = "<group>"; };
+		82CDA82B19B6D837002B14FE /* SynptomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynptomCell.h; sourceTree = "<group>"; };
+		82CDA82C19B6D837002B14FE /* SynptomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SynptomCell.m; sourceTree = "<group>"; };
+		82CDA82D19B6D837002B14FE /* SynptomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SynptomCell.xib; sourceTree = "<group>"; };
+		82CDA83019B6D873002B14FE /* EnterPay01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EnterPay01.png; sourceTree = "<group>"; };
+		82CDA83119B6D873002B14FE /* EnterPay01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EnterPay01@2x.png"; sourceTree = "<group>"; };
+		82CDA83219B6D873002B14FE /* EnterPay02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EnterPay02.png; sourceTree = "<group>"; };
+		82CDA83319B6D873002B14FE /* EnterPay02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EnterPay02@2x.png"; sourceTree = "<group>"; };
+		82CDA83419B6D873002B14FE /* X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = X.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		82CDA7F019B6C9A1002B14FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82CDA7F919B6C9A1002B14FE /* CoreGraphics.framework in Frameworks */,
+				82CDA7FB19B6C9A1002B14FE /* UIKit.framework in Frameworks */,
+				82CDA7F719B6C9A1002B14FE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82CDA81119B6C9A1002B14FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82CDA81619B6C9A1002B14FE /* XCTest.framework in Frameworks */,
+				82CDA81819B6C9A1002B14FE /* UIKit.framework in Frameworks */,
+				82CDA81719B6C9A1002B14FE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		82CDA7EA19B6C9A1002B14FE = {
+			isa = PBXGroup;
+			children = (
+				82CDA7FC19B6C9A1002B14FE /* ConditionController */,
+				82CDA81B19B6C9A1002B14FE /* ConditionControllerTests */,
+				82CDA7F519B6C9A1002B14FE /* Frameworks */,
+				82CDA7F419B6C9A1002B14FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		82CDA7F419B6C9A1002B14FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				82CDA7F319B6C9A1002B14FE /* ConditionController.app */,
+				82CDA81419B6C9A1002B14FE /* ConditionControllerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		82CDA7F519B6C9A1002B14FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82CDA7F619B6C9A1002B14FE /* Foundation.framework */,
+				82CDA7F819B6C9A1002B14FE /* CoreGraphics.framework */,
+				82CDA7FA19B6C9A1002B14FE /* UIKit.framework */,
+				82CDA81519B6C9A1002B14FE /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		82CDA7FC19B6C9A1002B14FE /* ConditionController */ = {
+			isa = PBXGroup;
+			children = (
+				82CDA83019B6D873002B14FE /* EnterPay01.png */,
+				82CDA83119B6D873002B14FE /* EnterPay01@2x.png */,
+				82CDA83219B6D873002B14FE /* EnterPay02.png */,
+				82CDA83319B6D873002B14FE /* EnterPay02@2x.png */,
+				82CDA83419B6D873002B14FE /* X.png */,
+				82CDA82B19B6D837002B14FE /* SynptomCell.h */,
+				82CDA82C19B6D837002B14FE /* SynptomCell.m */,
+				82CDA82D19B6D837002B14FE /* SynptomCell.xib */,
+				82CDA80519B6C9A1002B14FE /* ConditionAppDelegate.h */,
+				82CDA80619B6C9A1002B14FE /* ConditionAppDelegate.m */,
+				82CDA80819B6C9A1002B14FE /* Main.storyboard */,
+				82CDA80B19B6C9A1002B14FE /* ConditionViewController.h */,
+				82CDA80C19B6C9A1002B14FE /* ConditionViewController.m */,
+				82CDA80E19B6C9A1002B14FE /* Images.xcassets */,
+				82CDA7FD19B6C9A1002B14FE /* Supporting Files */,
+			);
+			path = ConditionController;
+			sourceTree = "<group>";
+		};
+		82CDA7FD19B6C9A1002B14FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				82CDA7FE19B6C9A1002B14FE /* ConditionController-Info.plist */,
+				82CDA7FF19B6C9A1002B14FE /* InfoPlist.strings */,
+				82CDA80219B6C9A1002B14FE /* main.m */,
+				82CDA80419B6C9A1002B14FE /* ConditionController-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		82CDA81B19B6C9A1002B14FE /* ConditionControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				82CDA82119B6C9A1002B14FE /* ConditionControllerTests.m */,
+				82CDA81C19B6C9A1002B14FE /* Supporting Files */,
+			);
+			path = ConditionControllerTests;
+			sourceTree = "<group>";
+		};
+		82CDA81C19B6C9A1002B14FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				82CDA81D19B6C9A1002B14FE /* ConditionControllerTests-Info.plist */,
+				82CDA81E19B6C9A1002B14FE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		82CDA7F219B6C9A1002B14FE /* ConditionController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82CDA82519B6C9A1002B14FE /* Build configuration list for PBXNativeTarget "ConditionController" */;
+			buildPhases = (
+				82CDA7EF19B6C9A1002B14FE /* Sources */,
+				82CDA7F019B6C9A1002B14FE /* Frameworks */,
+				82CDA7F119B6C9A1002B14FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ConditionController;
+			productName = ConditionController;
+			productReference = 82CDA7F319B6C9A1002B14FE /* ConditionController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		82CDA81319B6C9A1002B14FE /* ConditionControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82CDA82819B6C9A1002B14FE /* Build configuration list for PBXNativeTarget "ConditionControllerTests" */;
+			buildPhases = (
+				82CDA81019B6C9A1002B14FE /* Sources */,
+				82CDA81119B6C9A1002B14FE /* Frameworks */,
+				82CDA81219B6C9A1002B14FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				82CDA81A19B6C9A1002B14FE /* PBXTargetDependency */,
+			);
+			name = ConditionControllerTests;
+			productName = ConditionControllerTests;
+			productReference = 82CDA81419B6C9A1002B14FE /* ConditionControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		82CDA7EB19B6C9A1002B14FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Condition;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "陈松林";
+				TargetAttributes = {
+					82CDA81319B6C9A1002B14FE = {
+						TestTargetID = 82CDA7F219B6C9A1002B14FE;
+					};
+				};
+			};
+			buildConfigurationList = 82CDA7EE19B6C9A1002B14FE /* Build configuration list for PBXProject "ConditionController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 82CDA7EA19B6C9A1002B14FE;
+			productRefGroup = 82CDA7F419B6C9A1002B14FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				82CDA7F219B6C9A1002B14FE /* ConditionController */,
+				82CDA81319B6C9A1002B14FE /* ConditionControllerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		82CDA7F119B6C9A1002B14FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82CDA83919B6D873002B14FE /* X.png in Resources */,
+				82CDA83819B6D873002B14FE /* EnterPay02@2x.png in Resources */,
+				82CDA80F19B6C9A1002B14FE /* Images.xcassets in Resources */,
+				82CDA83719B6D873002B14FE /* EnterPay02.png in Resources */,
+				82CDA83519B6D873002B14FE /* EnterPay01.png in Resources */,
+				82CDA80119B6C9A1002B14FE /* InfoPlist.strings in Resources */,
+				82CDA82F19B6D838002B14FE /* SynptomCell.xib in Resources */,
+				82CDA80A19B6C9A1002B14FE /* Main.storyboard in Resources */,
+				82CDA83619B6D873002B14FE /* EnterPay01@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82CDA81219B6C9A1002B14FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82CDA82019B6C9A1002B14FE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		82CDA7EF19B6C9A1002B14FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82CDA80719B6C9A1002B14FE /* ConditionAppDelegate.m in Sources */,
+				82CDA80319B6C9A1002B14FE /* main.m in Sources */,
+				82CDA82E19B6D838002B14FE /* SynptomCell.m in Sources */,
+				82CDA80D19B6C9A1002B14FE /* ConditionViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82CDA81019B6C9A1002B14FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82CDA82219B6C9A1002B14FE /* ConditionControllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		82CDA81A19B6C9A1002B14FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82CDA7F219B6C9A1002B14FE /* ConditionController */;
+			targetProxy = 82CDA81919B6C9A1002B14FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		82CDA7FF19B6C9A1002B14FE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82CDA80019B6C9A1002B14FE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		82CDA80819B6C9A1002B14FE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82CDA80919B6C9A1002B14FE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		82CDA81E19B6C9A1002B14FE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82CDA81F19B6C9A1002B14FE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		82CDA82319B6C9A1002B14FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		82CDA82419B6C9A1002B14FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		82CDA82619B6C9A1002B14FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ConditionController/ConditionController-Prefix.pch";
+				INFOPLIST_FILE = "ConditionController/ConditionController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		82CDA82719B6C9A1002B14FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ConditionController/ConditionController-Prefix.pch";
+				INFOPLIST_FILE = "ConditionController/ConditionController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		82CDA82919B6C9A1002B14FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ConditionController.app/ConditionController";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ConditionController/ConditionController-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ConditionControllerTests/ConditionControllerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		82CDA82A19B6C9A1002B14FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ConditionController.app/ConditionController";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ConditionController/ConditionController-Prefix.pch";
+				INFOPLIST_FILE = "ConditionControllerTests/ConditionControllerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		82CDA7EE19B6C9A1002B14FE /* Build configuration list for PBXProject "ConditionController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82CDA82319B6C9A1002B14FE /* Debug */,
+				82CDA82419B6C9A1002B14FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82CDA82519B6C9A1002B14FE /* Build configuration list for PBXNativeTarget "ConditionController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82CDA82619B6C9A1002B14FE /* Debug */,
+				82CDA82719B6C9A1002B14FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		82CDA82819B6C9A1002B14FE /* Build configuration list for PBXNativeTarget "ConditionControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82CDA82919B6C9A1002B14FE /* Debug */,
+				82CDA82A19B6C9A1002B14FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 82CDA7EB19B6C9A1002B14FE /* Project object */;
+}
