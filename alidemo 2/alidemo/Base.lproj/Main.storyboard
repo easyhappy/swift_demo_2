@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KXM-Zj-qHU">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--支付宝demo-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="pay" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="输入api地址" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tu7-vn-xIl">
+                                <rect key="frame" x="10" y="74" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="api地址" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gYl-Y4-4mN">
+                                <rect key="frame" x="10" y="105" width="580" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="changeText:" destination="vXZ-lx-hvc" eventType="editingChanged" id="aPK-sq-Yzd"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNQ-R8-g1v">
+                                <rect key="frame" x="10" y="145" width="30" height="30"/>
+                                <state key="normal" title="抓取">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="fetchPayString:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5yj-xd-2Ex"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sl6-2h-7aq">
+                                <rect key="frame" x="60" y="145" width="30" height="30"/>
+                                <state key="normal" title="支付">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goPay:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9Q4-hb-cph"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ngc-Zf-rfZ">
+                                <rect key="frame" x="10" y="216" width="580" height="374"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="result" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWn-LM-eO1">
+                                <rect key="frame" x="10" y="185" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7If-4B-mBa">
+                                <rect key="frame" x="530" y="145" width="60" height="30"/>
+                                <state key="normal" title="收起键盘">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="hideKeyBoard:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oXk-2v-kOS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVH-YK-dnb">
+                                <rect key="frame" x="110" y="145" width="30" height="30"/>
+                                <state key="normal" title="生成">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="makeSign:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2Hp-He-oEJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rWn-LM-eO1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="0dL-q1-fwD"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Ngc-Zf-rfZ" secondAttribute="bottom" constant="10" id="1I8-nD-wnh"/>
+                            <constraint firstItem="Sl6-2h-7aq" firstAttribute="top" secondItem="gYl-Y4-4mN" secondAttribute="bottom" constant="10" id="6r1-aJ-mQD"/>
+                            <constraint firstAttribute="trailing" secondItem="gYl-Y4-4mN" secondAttribute="trailing" constant="10" id="8U7-sw-iF4"/>
+                            <constraint firstItem="WVH-YK-dnb" firstAttribute="leading" secondItem="Sl6-2h-7aq" secondAttribute="trailing" constant="20" id="Kvp-LH-3kl"/>
+                            <constraint firstItem="rWn-LM-eO1" firstAttribute="top" secondItem="Sl6-2h-7aq" secondAttribute="bottom" constant="10" id="Lcr-TH-rnx"/>
+                            <constraint firstItem="Ngc-Zf-rfZ" firstAttribute="top" secondItem="rWn-LM-eO1" secondAttribute="bottom" constant="10" id="aPW-Uo-0Ue"/>
+                            <constraint firstItem="WVH-YK-dnb" firstAttribute="top" secondItem="gYl-Y4-4mN" secondAttribute="bottom" constant="10" id="b9d-NL-wrL"/>
+                            <constraint firstItem="yNQ-R8-g1v" firstAttribute="top" secondItem="gYl-Y4-4mN" secondAttribute="bottom" constant="10" id="bCn-Zq-XHh"/>
+                            <constraint firstItem="Ngc-Zf-rfZ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="kfr-oL-FXe"/>
+                            <constraint firstItem="yNQ-R8-g1v" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="ock-xX-rhY"/>
+                            <constraint firstItem="tu7-vn-xIl" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="oiE-D7-dTO"/>
+                            <constraint firstItem="7If-4B-mBa" firstAttribute="top" secondItem="gYl-Y4-4mN" secondAttribute="bottom" constant="10" id="pEc-qj-RHg"/>
+                            <constraint firstAttribute="trailing" secondItem="7If-4B-mBa" secondAttribute="trailing" constant="10" id="pEh-pF-ptM"/>
+                            <constraint firstAttribute="trailing" secondItem="Ngc-Zf-rfZ" secondAttribute="trailing" constant="10" id="pf7-OQ-6LF"/>
+                            <constraint firstItem="Sl6-2h-7aq" firstAttribute="leading" secondItem="yNQ-R8-g1v" secondAttribute="trailing" constant="20" id="tIB-dV-GpR"/>
+                            <constraint firstItem="gYl-Y4-4mN" firstAttribute="top" secondItem="tu7-vn-xIl" secondAttribute="bottom" constant="10" id="uip-d5-FDy"/>
+                            <constraint firstItem="tu7-vn-xIl" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="10" id="zef-7f-eM7"/>
+                            <constraint firstItem="gYl-Y4-4mN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="zfg-ey-kDz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="支付宝demo" id="Swo-kg-6CH"/>
+                    <connections>
+                        <outlet property="apiTextField" destination="gYl-Y4-4mN" id="YrY-3Q-5Gd"/>
+                        <outlet property="resultTextView" destination="Ngc-Zf-rfZ" id="dRI-DS-pzv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="890" y="1090"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BrF-c0-Z2w">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KXM-Zj-qHU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jnf-hJ-kTD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="ik0-dT-MFg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ipv-b8-1RG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244" y="1090"/>
+        </scene>
+    </scenes>
+</document>
