@@ -1,0 +1,7 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'LoadingImageView Example' do
+  platform :ios, '8.0'
+  pod 'LoadingImageView', :path => '.'
+end
+

@@ -1,0 +1,3 @@
+platform :ios, '8.0'
+pod "SwiftyJSON"
+pod "RBStoryboardLink", "~> 0.1"

@@ -1,0 +1,5 @@
+#include "Pods-LoadingImageView Example-LoadingImageView.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/LoadingImageView" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/LoadingImageView"
+OTHER_LDFLAGS = ${PODS_LOADINGIMAGEVIEW_EXAMPLE_LOADINGIMAGEVIEW_OTHER_LDFLAGS} -ObjC
+PODS_ROOT = ${SRCROOT}

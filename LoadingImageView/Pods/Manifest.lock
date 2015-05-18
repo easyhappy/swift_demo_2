@@ -1,0 +1,14 @@
+PODS:
+  - LoadingImageView (0.1.2)
+
+DEPENDENCIES:
+  - LoadingImageView (from `.`)
+
+EXTERNAL SOURCES:
+  LoadingImageView:
+    :path: .
+
+SPEC CHECKSUMS:
+  LoadingImageView: e6daf4f5d39fc1a78cc985276c5131ddbc25b5dc
+
+COCOAPODS: 0.35.0
